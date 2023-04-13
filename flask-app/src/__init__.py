@@ -1,4 +1,3 @@
-# ALEXANDER
 # Some set up for the application 
 
 from flask import Flask
