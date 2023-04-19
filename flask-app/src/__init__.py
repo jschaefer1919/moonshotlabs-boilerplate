@@ -29,17 +29,11 @@ def create_app():
     def welcome():
         return "<h1>Welcome to Moonshot Labs!</h1>"
 
-    # Import the various routes - James
-    from src.views import views
-    from src.customers.customers import customers
-    from src.products.products  import products
+    # Import the various routes
     from src.bettor.bettor import bettor
     from src.analyst.analyst import analyst
 
-    # Register the routes that we just imported so they can be properly handled - James
-    app.register_blueprint(views,       url_prefix='/v')
-    app.register_blueprint(customers,   url_prefix='/c')
-    app.register_blueprint(products,    url_prefix='/p')
+    # Register the routes that we just imported so they can be properly handled
     app.register_blueprint(bettor,    url_prefix='/b')
     app.register_blueprint(analyst,    url_prefix='/a')
 

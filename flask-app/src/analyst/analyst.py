@@ -155,7 +155,7 @@ def get_top_pitchers():
 
 @analyst.route('/playerstats/<team_ID>', methods=['GET'])
 def get_playerstats_team(team_ID):
-    cursor = db.get_db().cursor()
+    cursor = db.get_db().cursor()    
     
     cursor.execute('SELECT cur_team,p_fName, p_lName, position, rbi, hits, ks, slg, obs, era, \
         bat_avg, games_played FROM Player JOIN Player_Stats USING (player_id) WHERE team_id = {0};'.format(team_ID))
