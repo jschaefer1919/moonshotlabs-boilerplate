@@ -64,12 +64,12 @@
     "method": "POST",
     "sortNum": 60000,
     "created": "2023-04-17T23:50:22.048Z",
-    "modified": "2023-04-17T23:56:12.207Z",
+    "modified": "2023-04-20T06:30:19.332Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bet_type\": \"Parlay\",\n  \"bet_description\": \"Placed an Parlay Bet on the Royals\",\n  \"amount\": 10,\n  \"game_id\": 84,\n  \"ssn\": \"211-58-6661\"\n}",
+      "raw": "{\n  \"bet_type\": \"Over/Under\",\n  \"bet_description\": \"Placed an Parlay Bet on the Braves\",\n  \"amount\": 10,\n  \"game_id\": 1,\n  \"ssn\": \"211-58-6661\"\n}",
       "form": []
     },
     "tests": []
@@ -83,12 +83,12 @@
     "method": "POST",
     "sortNum": 70000,
     "created": "2023-04-17T23:55:04.117Z",
-    "modified": "2023-04-17T23:55:04.117Z",
+    "modified": "2023-04-20T06:31:07.016Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bet_type\": \"Over/Under\",\n  \"bet_description\": \"Placed an Over/Under Bet on the Red Sox Game\",\n  \"amount\": 20,\n  \"game_id\": 197,\n  \"ssn\": \"235-85-1623\"\n}",
+      "raw": "{\n  \"bet_type\": \"Over/Under\",\n  \"bet_description\": \"Placed an Over/Under Bet on the Royals Game\",\n  \"amount\": 20,\n  \"game_id\": 84,\n  \"ssn\": \"235-85-1623\"\n}",
       "form": []
     },
     "tests": []
@@ -102,12 +102,12 @@
     "method": "PUT",
     "sortNum": 70000,
     "created": "2023-04-18T00:14:55.111Z",
-    "modified": "2023-04-18T00:23:15.343Z",
+    "modified": "2023-04-20T06:32:51.268Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bet_id\": 104,\n  \"payout\": 20,\n  \"return_rate\": 2.00\n}",
+      "raw": "{\n  \"bet_id\": 99,\n  \"payout\": 20,\n  \"return_rate\": 2.00\n}",
       "form": []
     },
     "tests": []
@@ -121,12 +121,12 @@
     "method": "PUT",
     "sortNum": 80000,
     "created": "2023-04-18T00:23:47.000Z",
-    "modified": "2023-04-18T00:24:32.110Z",
+    "modified": "2023-04-20T06:33:22.925Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"bet_id\": 105,\n  \"payout\": 40,\n  \"return_rate\": 2.00\n}",
+      "raw": "{\n  \"bet_id\": 98,\n  \"payout\": 150,\n  \"return_rate\": 2.00\n}",
       "form": []
     },
     "tests": []
@@ -140,12 +140,12 @@
     "method": "POST",
     "sortNum": 80000,
     "created": "2023-04-18T00:57:55.981Z",
-    "modified": "2023-04-18T01:05:39.239Z",
+    "modified": "2023-04-20T06:36:21.203Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n \"hyperlink\": \"https://bleacherreport.com/boston-red-sox\",\n \"title\": \"Red Sox Lose to the Angels!\",\n \"article_body\": \"The start-and-stop nature of Monday’s game put a damper on the Shohei Ohtani show, as the Angels replaced him on the mound with Tucker Davidson after a third-inning rain delay lasting one hour and 25 minutes. The Halos led 5-1 at the time, with Ohtani striking out three, walking one and uncorking two wild pitches over two hitless frames. Boston fell back below .500 (8-9) with the loss, which came on the heels of three straight Red Sox wins to begin their series with the Angels. The Sox next welcome the Minnesota Twins to town for three games, starting Tuesday night.\",\n \"game_id\": 167\n}",
+      "raw": "{\n \"new_hyperlink\": \"https://bleacherreport.com/boston-red-sox/9\",\n \"title\": \"Red Sox Lose to the Angels!\",\n \"article_body\": \"The start-and-stop nature of Monday’s game put a damper on the Shohei Ohtani show, as the Angels replaced him on the mound with Tucker Davidson after a third-inning rain delay lasting one hour and 25 minutes. The Halos led 5-1 at the time, with Ohtani striking out three, walking one and uncorking two wild pitches over two hitless frames. Boston fell back below .500 (8-9) with the loss, which came on the heels of three straight Red Sox wins to begin their series with the Angels. The Sox next welcome the Minnesota Twins to town for three games, starting Tuesday night.\",\n \"game_id\": 167\n}",
       "form": []
     },
     "tests": []
@@ -159,12 +159,12 @@
     "method": "POST",
     "sortNum": 90000,
     "created": "2023-04-18T04:36:44.834Z",
-    "modified": "2023-04-18T04:38:52.166Z",
+    "modified": "2023-04-20T06:36:28.475Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n \"hyperlink\": \"https://www.boston.com/sports/boston-red-sox/2023/04/16/red-sox-angels-sunday-final-score-game-recap-highlights-garrett-whitlock/\",\n \"title\": \"Garrett Whitlock’s strong outing propels Red Sox to 2-1 win!\",\n \"article_body\": \"Garrett Whitlock threw seven innings of one-run ball, Justin Turner hit a two-run homer and the Boston Red Sox beat the Los Angeles Angels 2-1 on Sunday in a game that lasted just under two hours. Boston honored their 2013 World Series championship team before the game, including new Hall of Famer David Ortiz, the 2013 World Series MVP.\",\n \"game_id\": 167\n}",
+      "raw": "{\n \"new_hyperlink\": \"https://www.boston.com/sports/boston-red-sox/2023/04/16/red-sox-angels-sunday-final-score-game-recap-highlights-garrett-whitlock/8\",\n \"title\": \"Garrett Whitlock’s strong outing propels Red Sox to 2-1 win!\",\n \"article_body\": \"Garrett Whitlock threw seven innings of one-run ball, Justin Turner hit a two-run homer and the Boston Red Sox beat the Los Angeles Angels 2-1 on Sunday in a game that lasted just under two hours. Boston honored their 2013 World Series championship team before the game, including new Hall of Famer David Ortiz, the 2013 World Series MVP.\",\n \"game_id\": 167\n}",
       "form": []
     },
     "tests": []
@@ -178,12 +178,12 @@
     "method": "DELETE",
     "sortNum": 90000,
     "created": "2023-04-18T04:47:54.660Z",
-    "modified": "2023-04-18T04:51:22.329Z",
+    "modified": "2023-04-20T06:38:34.607Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n \"hyperlink\": \"http://marketwatch.com\"\n}",
+      "raw": "{\n \"hyperlink\": \"http://360.cn\"\n}",
       "form": []
     },
     "tests": []
@@ -197,12 +197,12 @@
     "method": "DELETE",
     "sortNum": 100000,
     "created": "2023-04-18T04:50:55.371Z",
-    "modified": "2023-04-18T04:50:55.371Z",
+    "modified": "2023-04-20T06:38:56.114Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n \"hyperlink\": \"https://wired.com\"\n}",
+      "raw": "{\n \"hyperlink\": \"http://about.com\"\n}",
       "form": []
     },
     "tests": []
@@ -268,11 +268,11 @@
     "colId": "4ccf6140-0555-4fdf-9008-b9f2eab5a134",
     "containerId": "",
     "name": "Player Info (1)",
-    "url": "localhost:8001/a/playerinfo/5",
+    "url": "localhost:8001/a/playerinfo/Blanchflower",
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-04-18T14:35:41.784Z",
-    "modified": "2023-04-18T14:37:07.139Z",
+    "modified": "2023-04-20T04:02:57.368Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -282,11 +282,11 @@
     "colId": "4ccf6140-0555-4fdf-9008-b9f2eab5a134",
     "containerId": "",
     "name": "Player Info (2)",
-    "url": "localhost:8001/a/playerinfo/25",
+    "url": "localhost:8001/a/playerinfo/Hardwicke",
     "method": "GET",
     "sortNum": 20000,
     "created": "2023-04-18T14:39:38.088Z",
-    "modified": "2023-04-18T14:39:50.444Z",
+    "modified": "2023-04-20T06:06:29.875Z",
     "headers": [],
     "params": [],
     "tests": []
@@ -300,12 +300,12 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-04-18T14:59:54.534Z",
-    "modified": "2023-04-18T15:17:34.999Z",
+    "modified": "2023-04-20T06:08:22.074Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"p_fName\": \"James\",\n  \"p_lName\": \"Schaefer\",\n  \"age\": 22,\n  \"position\": \"Pitcher\",\n  \"salary\": 750000,\n  \"cur_team\": \"Boston Red Sox\",\n  \"draft_year\": 2019,\n  \"pick_number\": 33,\n  \"college\": \"Northeastern University\",\n  \"jersey_number\": 13\n}\n",
+      "raw": "{\n  \"p_fName\": \"Joey\",\n  \"p_lName\": \"Schaefer\",\n  \"age\": 22,\n  \"position\": \"Pitcher\",\n  \"salary\": 750000,\n  \"cur_team\": \"Boston Red Sox\",\n  \"draft_year\": 2019,\n  \"pick_number\": 33,\n  \"college\": \"Northeastern University\",\n  \"jersey_number\": 13\n}\n",
       "form": []
     },
     "tests": []
@@ -319,12 +319,12 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2023-04-18T15:18:04.295Z",
-    "modified": "2023-04-18T15:18:49.904Z",
+    "modified": "2023-04-20T06:08:57.833Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"p_fName\": \"Robert\",\n  \"p_lName\": \"Schaefer\",\n  \"age\": 27,\n  \"position\": \"Catcher\",\n  \"salary\": 1000000,\n  \"cur_team\": \"New York Yankees\",\n  \"draft_year\": 2015,\n  \"pick_number\": 10,\n  \"college\": \"Northwestern University\",\n  \"jersey_number\": 20\n}\n",
+      "raw": "{\n  \"p_fName\": \"Bruno\",\n  \"p_lName\": \"Schaefer\",\n  \"age\": 27,\n  \"position\": \"Catcher\",\n  \"salary\": 1000000,\n  \"cur_team\": \"New York Yankees\",\n  \"draft_year\": 2015,\n  \"pick_number\": 10,\n  \"college\": \"Northwestern University\",\n  \"jersey_number\": 20\n}\n",
       "form": []
     },
     "tests": []
@@ -338,12 +338,12 @@
     "method": "PUT",
     "sortNum": 30000,
     "created": "2023-04-18T15:39:25.674Z",
-    "modified": "2023-04-18T15:46:09.996Z",
+    "modified": "2023-04-20T06:12:14.798Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"p_fName\": \"Jamal\",\n  \"p_lName\": \"Crawford\",\n  \"age\": 35,\n  \"position\": \"Catcher\",\n  \"salary\": 1500000,\n  \"cur_team\": \"Texas Rangers\",\n  \"draft_year\": 2007,\n  \"pick_number\": 2,\n  \"college\": \"University of Texas\",\n  \"jersey_number\": 1,\n  \"player_id\": 300\n}",
+      "raw": "{\n  \"p_fName2\": \"Heath\",\n  \"p_lName2\": \"Skillern\",\n  \"age2\": 35,\n  \"position2\": \"Pitcher\",\n  \"salary2\": 1500000,\n  \"cur_team2\": \"Texas Rangers\",\n  \"draft_year2\": 2007,\n  \"pick_number2\": 5,\n  \"college2\": \"University of Texas\",\n  \"jersey_number2\": 1,\n  \"player_id2\": 3\n}",
       "form": []
     },
     "tests": []
@@ -357,12 +357,12 @@
     "method": "PUT",
     "sortNum": 40000,
     "created": "2023-04-18T15:44:41.965Z",
-    "modified": "2023-04-18T15:47:33.371Z",
+    "modified": "2023-04-20T06:13:35.782Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"p_fName\": \"Ciro\",\n  \"p_lName\": \"Wherrit\",\n  \"age\": 38,\n  \"position\": \"Third Baseman\",\n  \"salary\": 17524206,\n  \"cur_team\": \"Seattle Mariners\",\n  \"draft_year\": 2017,\n  \"pick_number\": 194,\n  \"college\": \"Buddhist Acamedy of China\",\n  \"jersey_number\": 30,\n  \"player_id\": 299\n}",
+      "raw": "{\n  \"p_fName2\": \"Ciro\",\n  \"p_lName2\": \"Wherrit\",\n  \"age2\": 38,\n  \"position2\": \"Third Baseman\",\n  \"salary2\": 17524206,\n  \"cur_team2\": \"Seattle Mariners\",\n  \"draft_year2\": 2017,\n  \"pick_number2\": 1,\n  \"college2\": \"Buddhist Acamedy of China\",\n  \"jersey_number2\": 28,\n  \"player_id2\": 299\n}",
       "form": []
     },
     "tests": []
@@ -513,6 +513,48 @@
     "sortNum": 90000,
     "created": "2023-04-18T17:01:36.572Z",
     "modified": "2023-04-18T17:02:13.859Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "1ef7c293-dc6e-47ca-aa8e-1c79f6282324",
+    "colId": "85b63a77-80c8-4cc8-98f7-0a46e67c60f9",
+    "containerId": "",
+    "name": "Get Game ID (1)",
+    "url": "localhost:8001/b/gameid/2023-09-10",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-04-19T19:32:54.455Z",
+    "modified": "2023-04-19T21:24:33.220Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8f59f453-fe28-4a58-ae48-6cff23b4cfd0",
+    "colId": "85b63a77-80c8-4cc8-98f7-0a46e67c60f9",
+    "containerId": "",
+    "name": "max bet id (1)",
+    "url": "localhost:8001/b/recentbetid",
+    "method": "GET",
+    "sortNum": 150000,
+    "created": "2023-04-20T05:15:26.029Z",
+    "modified": "2023-04-20T05:15:45.555Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "2a78a0f5-860f-471d-8bae-d208efe8a48f",
+    "colId": "4ccf6140-0555-4fdf-9008-b9f2eab5a134",
+    "containerId": "",
+    "name": "Get the Player ID (1)",
+    "url": "localhost:8001/a/playerprof/Skeleton",
+    "method": "GET",
+    "sortNum": 100000,
+    "created": "2023-04-20T06:23:44.120Z",
+    "modified": "2023-04-20T06:24:23.740Z",
     "headers": [],
     "params": [],
     "tests": []

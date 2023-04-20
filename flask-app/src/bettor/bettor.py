@@ -5,6 +5,7 @@ from src import db
 
 bettor = Blueprint('bettor', __name__)
 
+# getting the bet stats for a team
 @bettor.route('/bettingstats/<team_ID>', methods=['GET'])
 def get_betstats(team_ID):
     cursor = db.get_db().cursor()
@@ -20,7 +21,7 @@ def get_betstats(team_ID):
     the_response.mimetype = 'application/json'
     return the_response
 
-
+# getting the team stats for a team
 @bettor.route('/teamstats/<team_ID>', methods=['GET'])
 def get_teamstats(team_ID):
     cursor = db.get_db().cursor()
@@ -38,7 +39,7 @@ def get_teamstats(team_ID):
     the_response.mimetype = 'application/json'
     return the_response
 
-
+# creating a new bet slip in the DB
 @bettor.route('/bet', methods = ['POST'])
 def create_new_bet():
    the_data = request.json
@@ -64,6 +65,7 @@ def create_new_bet():
 
    return 'Success!'
 
+# updating a bet post game with the results
 @bettor.route('/updatebet', methods = ['PUT'])
 def update_finalized_bet():   
    the_data = request.json
@@ -86,12 +88,13 @@ def update_finalized_bet():
 
    return 'Success!'
 
+# creating a new article for the user/DB archive
 @bettor.route('/article', methods = ['POST'])
 def create_new_article():
    the_data = request.json
    current_app.logger.info(the_data)
 
-   link = the_data['hyperlink']
+   link = the_data['new_hyperlink']
    article_title = the_data['title']
    body = the_data['article_body']
    
@@ -108,6 +111,7 @@ def create_new_article():
 
    return 'Success!'
 
+# deleting an article from the archive
 @bettor.route('/deletearticle', methods = ['DELETE'])
 def remove_article():
    the_data = request.json
@@ -126,6 +130,7 @@ def remove_article():
 
    return 'Success!'
 
+#  getting a bettor's account balance
 @bettor.route('/earnings/<account_NO>', methods=['GET'])
 def get_earnings(account_NO):
     cursor = db.get_db().cursor()
@@ -144,7 +149,7 @@ def get_earnings(account_NO):
     the_response.mimetype = 'application/json'
     return the_response
 
-
+# get game results and all bets placed on a game
 @bettor.route('/betinfo/<game_id>', methods=['GET'])
 def get_article(game_id):
     cursor = db.get_db().cursor()
@@ -158,6 +163,49 @@ def get_article(game_id):
     theData = cursor.fetchall()
     for row in theData:
         json_data.append(dict(zip(row_headers, row)))
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+# get a list of games based from a date on - for appsmith development
+@bettor.route('/gameid/<date>', methods=['GET'])
+def get_gameid2(date):
+    cursor = db.get_db().cursor()
+    
+    query = 'SELECT game_date, result, home_team, away_team, game_id FROM Game WHERE game_date >= "'
+    query += str(date) + '" ORDER BY game_date ASC LIMIT 5;' 
+
+    cursor.execute(query)
+    
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        current_app.logger.info(row)
+        json_data.append(dict(zip(row_headers, row)))
+    
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+# get the bet id of the last placed bet - for appsmith development
+@bettor.route('/recentbetid', methods=['GET'])
+def max_betid():
+    cursor = db.get_db().cursor()
+    
+    query = 'SELECT MAX(bet_id) AS user_bet_id FROM Bet_Slip;'
+
+    cursor.execute(query)
+    
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        current_app.logger.info(row)
+        json_data.append(dict(zip(row_headers, row)))
+    
     the_response = make_response(jsonify(json_data))
     the_response.status_code = 200
     the_response.mimetype = 'application/json'

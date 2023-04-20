@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "_id": "69a7d7b1-5981-4308-844f-c787525a20f8",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/a/playerprof",
+    "url": "localhost:8001/a/playerprof",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-19T20:02:56.787Z",
+    "modified": "2023-04-19T20:02:56.787Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "cd42ac31-a5b7-441c-a847-a515bcb60ac7",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:8001/a/playerprof/Verring",
+    "url": "localhost:8001/a/playerprof/Verring",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-19T20:03:21.941Z",
+    "modified": "2023-04-19T20:03:21.941Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

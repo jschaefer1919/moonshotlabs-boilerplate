@@ -5,12 +5,13 @@ from src import db
 
 analyst = Blueprint('analyst', __name__)
 
-@analyst.route('/playerinfo/<player_ID>', methods=['GET'])
-def get_player_info(player_ID):
+# returns basic info on a player
+@analyst.route('/playerinfo/<surname>', methods=['GET'])
+def get_player_info(surname):
     cursor = db.get_db().cursor()
     
-    cursor.execute('SELECT p_fName, p_lName, position, age, draft_year, college, salary, cur_team, jersey_number \
-                    FROM Player WHERE player_id = {};'.format(player_ID))
+    cursor.execute('SELECT p_fName, p_lName, player_id, position, age, draft_year, pick_number,college, salary, cur_team, jersey_number \
+                    FROM Player WHERE p_lName = "' + surname + '";')
 
     row_headers = [x[0] for x in cursor.description]
     json_data = []
@@ -22,6 +23,7 @@ def get_player_info(player_ID):
     the_response.mimetype = 'application/json'
     return the_response
 
+# creates a new player profile/info in the DB
 @analyst.route('/newplayer', methods = ['POST'])
 def create_new_player():
    the_data = request.json
@@ -44,7 +46,6 @@ def create_new_player():
    query += str(age) + ', "'
    query += position + '", '
    query += str(salary) + ', "'
-   # query += team + '");'''
    query += team + '", '
    query += str(draft_yr) + ', '
    query += str(pick_num) + ', "'
@@ -59,23 +60,23 @@ def create_new_player():
 
    return 'Success!'
 
-
+# updates an existing player's info in the DB
 @analyst.route('/updateplayer', methods = ['PUT'])
 def update_player_profile():   
    the_data = request.json
    current_app.logger.info(the_data)
    
-   fName = the_data['p_fName']
-   lName = the_data['p_lName']
-   age = the_data['age']
-   position = the_data['position']
-   salary = the_data['salary']
-   team = the_data['cur_team']
-   draft_yr = the_data['draft_year']
-   pick_num = the_data['pick_number']
-   college = the_data['college']
-   jersey_num = the_data['jersey_number']
-   id = the_data['player_id']
+   fName = the_data['p_fName2']
+   lName = the_data['p_lName2']
+   age = the_data['age2']
+   position = the_data['position2']
+   salary = the_data['salary2']
+   team = the_data['cur_team2']
+   draft_yr = the_data['draft_year2']
+   pick_num = the_data['pick_number2']
+   college = the_data['college2']
+   jersey_num = the_data['jersey_number2']
+   id = the_data['player_id2']
 
    query = 'UPDATE Player SET p_fName = "'
    query += fName + '", p_lName = "'
@@ -98,6 +99,7 @@ def update_player_profile():
 
    return 'Success!'
 
+# removes a highlight from the DB
 @analyst.route('/delhighlight', methods = ['DELETE'])
 def remove_highlight():
    the_data = request.json
@@ -118,7 +120,7 @@ def remove_highlight():
 
    return 'Success!'
 
-
+# gets the advnaced stats on a team
 @analyst.route('/advstats/<team_ID>', methods=['GET'])
 def get_advstats(team_ID):
     cursor = db.get_db().cursor()
@@ -135,6 +137,7 @@ def get_advstats(team_ID):
     the_response.mimetype = 'application/json'
     return the_response
 
+# gets the top 5 pitches in the league based on era
 @analyst.route('/toppitchers', methods=['GET'])
 def get_top_pitchers():
     cursor = db.get_db().cursor()
@@ -152,7 +155,7 @@ def get_top_pitchers():
     the_response.mimetype = 'application/json'
     return the_response
 
-
+# gets the stats for all players on a team
 @analyst.route('/playerstats/<team_ID>', methods=['GET'])
 def get_playerstats_team(team_ID):
     cursor = db.get_db().cursor()    
@@ -170,6 +173,7 @@ def get_playerstats_team(team_ID):
     the_response.mimetype = 'application/json'
     return the_response
 
+# gets the injury history of a player based on last name
 @analyst.route('/injuryhistory/<p_lNAME>', methods=['GET'])
 def get_player_injury_history(p_lNAME):
     cursor = db.get_db().cursor()
@@ -185,6 +189,26 @@ def get_player_injury_history(p_lNAME):
     theData = cursor.fetchall()
     for row in theData:
         json_data.append(dict(zip(row_headers, row)))
+    the_response = make_response(jsonify(json_data))
+    the_response.status_code = 200
+    the_response.mimetype = 'application/json'
+    return the_response
+
+# get the player_id of a player in the DB based on last name - used for dev in appsmith
+@analyst.route('/playerprof/<last_name>', methods=['GET'])
+def get_playerid(last_name):
+    cursor = db.get_db().cursor()
+    
+    query = 'SELECT player_id FROM Player WHERE p_lName = "'
+    query += last_name + '";'
+    cursor.execute(query)
+    
+    row_headers = [x[0] for x in cursor.description]
+    json_data = []
+    theData = cursor.fetchall()
+    for row in theData:
+        json_data.append(dict(zip(row_headers, row)))
+
     the_response = make_response(jsonify(json_data))
     the_response.status_code = 200
     the_response.mimetype = 'application/json'
