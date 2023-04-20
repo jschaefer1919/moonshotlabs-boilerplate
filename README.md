@@ -21,3 +21,4 @@ This repo contains a boilerplate setup for spinning up 3 Docker containers:
 Labs is designed to provide an array of basic statistics and analytics to a wide variety of
 customers with differing MLB data-driven needs. Subscribers of Moonshot Labs will have the opportunity to
 access the online platform through three contributor packages: a basic, ante, and analyst package. As of late, Moonshot Labs decided to operate under an open-source managment style in order to aggregate a wider variety and amount of data on the MLB since its current team is too small.
+1. Link to Demo/Presentation: https://www.youtube.com/watch?v=muox4PVEm9I
